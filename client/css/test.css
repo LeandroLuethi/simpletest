@@ -1,0 +1,196 @@
+body{
+    background: linear-gradient(70deg, #021c31, #073255);
+}
+
+input{
+    vertical-align: middle;
+}
+
+div, form {
+    background-color: white;
+}
+
+#points{
+    width: 5vh;
+    height: 5vh;
+    text-align: center;
+    font-size: large;
+    color: white;
+    background-color: transparent;
+    position:absolute;
+    right:8.5%;
+    top: 3%;
+}
+
+#question{
+    font-size: 2.5em;
+    min-height: 1.5em;
+    text-align: center;   
+    padding-left: 1%;
+    padding-top: 0.25em;;
+    border-radius: 13px;
+    width:71%;
+    position:absolute;
+    left:15%;
+    right:15%;
+    top:8vh;
+   
+
+}
+
+#answers{
+    font-size: 1.25em;
+    padding-left: 2%;
+    width:70%;
+    min-height: 40%;
+    border-radius: 13px;
+    position:absolute;
+    left:15%;
+    right:15;
+    top:20vh;
+}
+
+.button{
+    filter:brightness(100%);
+    transition: 0.1s;
+    border:none;
+    background-color: transparent;
+}
+
+.button:hover{
+    filter:brightness(80%)
+}
+
+#next{
+    background-color: transparent;
+    background-image: url(../img/back.png);
+    background-size: cover;
+    width: 6vh;
+    height: 6vh;
+    border: none;
+    border-radius: 50%;
+    position:absolute;
+    right:6.5%;
+    top:11vh;
+    -webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+#back{
+    background-color: transparent;
+    background-image: url(../img/back.png);
+    background-size: cover;
+    width: 6vh;
+    height: 6vh;
+    border: none;
+    border-radius: 50%;
+    position:absolute;
+    left:8%;
+    top:11vh;
+}
+
+#mark{
+    background-color: transparent;
+    background-image: url(../img/Achtung.png);
+    background-size: cover;
+    width: 6vh;
+    height: 6vh;
+    border: none;
+    border-radius: 25%;
+    position:absolute;
+    left:8%;
+    top:46vh;
+}
+
+#finish{
+    background-color: rgba(0, 189, 252, 0.842);
+    padding:0.5rem;
+    background-image: url(../img/finishicon.png);
+    background-size: cover;
+    width: 6vh;
+    height: 6vh;
+    border: none;
+    border-radius: 25%;
+    position:absolute;
+    right: 6.5%;
+    top: 46vh;
+}
+
+.marked {
+    background: orange;
+}
+
+@media screen and (min-width:400px) and (max-width:780px){
+
+    #next{
+        width: 6vh;
+        height: 6vh;
+        position:absolute;
+        right:2.5%;
+        top:11vh;
+    }
+    
+    #back{
+        width: 6vh;
+        height: 6vh;
+        position:absolute;
+        left:4%;
+        top:11vh;
+    }
+    
+    #mark{
+        width: 6vh;
+        height: 6vh;
+        position:absolute;
+        left:4%;
+        top:46vh;
+    }
+    
+    #finish{
+        width: 6vh;
+        height: 6vh;
+        position:absolute;
+        right: 2.5%;
+        top: 46vh;
+    }
+
+}
+
+@media screen and (max-width:400px){
+
+    #next{
+        width: 5vh;
+        height: 5vh;
+        position:absolute;
+        right:0.5%;
+        top:11vh;
+    }
+    
+    #back{
+        width: 5vh;
+        height: 5vh;
+        position:absolute;
+        left:2%;
+        top:11vh;
+    }
+    
+    #mark{
+        width: 5vh;
+        height: 5vh;
+        position:absolute;
+        left:2%;
+        top:46vh;
+    }
+    
+    #finish{
+        width: 5vh;
+        height: 5vh;
+        position:absolute;
+        right: 0.5%;
+        top: 46vh;
+    }
+
+}

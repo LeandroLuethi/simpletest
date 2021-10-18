@@ -1,0 +1,262 @@
+body{
+    background: linear-gradient(70deg, #021c31, #073255);
+}
+
+h4{
+    color: white
+}
+p{
+    color: white
+}
+
+#documentElement{
+
+    position: absolute;
+    top: 40vh;
+    left:45%;
+}
+#documenttitle{
+    width: 10%;
+    height: 4vh;
+}
+
+#title{
+    background-color: rgb(175, 186, 214);
+}
+#title:focus{
+    background-color: white;
+}
+
+#selectsubject{
+    background-color: rgb(175, 186, 214);
+}
+#selectsubject:focus{
+    background-color: white;
+}
+
+.pointsdiv{
+    position:absolute;
+    right: 3%;
+    top: 25vh;
+}
+
+.points{
+    min-height: 6vh;
+    max-width: 6vh;
+    border-radius: 5px;
+    background-color: lightblue;
+}
+.points:focus{
+    background-color:rgb(175, 186, 214);
+}
+
+#all{
+    display: none;
+    margin-right: 5%;
+    
+}
+
+.containerquestion{
+    justify-content: center;
+     margin-top:10vh;
+     margin-left: 6%;
+     margin-right: 4%;
+     background-color:lightblue;
+     
+     min-height: 10vh;
+     height:fit-content;
+     padding-left:1rem;
+     padding-top:0.25rem;
+     border-radius: 5px;
+}
+.question{
+    background-color: lightblue;
+    width: 90%;
+    min-width:fit-content;
+    border:none;
+    font-size: 30px;
+    font-weight: bold;
+    height:9vh;
+}
+
+.containeranswers{
+    margin-top:2vh;
+     margin-left: 6%;
+     margin-right: 4%;
+     background-color:lightblue;
+     height:fit-content;
+     border-radius: 5px;
+}
+
+.answer{
+margin: 1%;
+font-size: 20px;;
+background-color: lightblue;
+border:none;
+width:90%;
+min-width:fit-content;
+justify-items: center;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+    background-color: rgb(175, 186, 214);
+}
+
+.button{
+    background-color: transparent;
+    filter:brightness(100%);
+    transition: 0.1s;
+    border:none;
+}
+.button:hover{
+    filter:brightness(80%)
+}
+
+#next{
+    background-image: url(../img/back.png);
+    background-color: transparent;
+    background-size: cover;
+    width: 5vh;
+    height: 5vh;
+    border: none;
+    position:absolute;
+    right:4%;
+    top:2vh;
+    -webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+#back{
+    background-image: url(../img/back.png);
+    background-size: cover;
+    width: 5vh;
+    height: 5vh;
+    border: none;
+    position:absolute;
+    left:2%;
+    top:2vh;
+}
+
+#more{
+    background-image: url(../img/Plus.png);
+    background-color: transparent;
+    background-size: cover;
+    width: 5vh;
+    height: 5vh;
+    border: none;
+    position:absolute;
+    right:4%;
+    top:47.5vh;
+}
+
+#save{
+    background-image: url(../img/end.png);
+    background-color: orange;
+    background-size: cover;
+    width: 5vh;
+    height: 5vh;
+    border: solid;
+    border-color: lightblue;
+    border-radius:5%;
+    position:absolute;
+    right: 4%;
+    bottom: 5vh;
+}
+
+@media screen and (min-width:400px) and (max-width:780px){
+ 
+    #documentElement{
+        position: absolute;
+        left: 30%;
+    }
+
+    .answer{
+        font-size: 25px;;
+        width:85%;
+    }
+
+    .pointsdiv{
+        position:absolute;
+        right: 20%;
+        top: 1vh;
+    }
+    
+    #more{
+        width: 5vh;
+        height: 5vh;
+        position:absolute;
+        right:45%;
+        top:2vh;
+    }
+        
+    #save{
+        width: 5vh;
+        height: 5vh;
+        position:absolute;
+        left: 30%;
+        top: 2vh;
+    }
+    
+        
+}
+
+@media screen and (max-width:400px){
+
+    #documentElement{
+        position: absolute;
+        left: 30%;
+    }
+
+    .answer{
+        font-size: 20px;
+        max-width:50%;
+        }
+
+    .pointsdiv{
+        position:absolute;
+        right: 25%;
+        top: 1vh;
+    }
+
+    #more{
+        width: 5vh;
+        height: 5vh;
+        position:absolute;
+        right:45%;
+        top:2vh;
+    }
+        
+    #save{
+        width: 5vh;
+        height: 5vh;
+        position:absolute;
+        left: 25%;
+        top: 2vh;
+    }
+}
+
+@media screen and (min-width:1600px){
+    .question{
+        font-size:40px;
+    }
+
+    .answer{
+        font-size:30px;
+    }
+
+    #title{
+        font-size:1.5rem;
+    }
+    
+    #selectsubject{
+        font-size:1.5rem;
+    }  
+
+    h4{
+        font-size:1.5rem;
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1">
+
+        <title>Erstellen</title>
+
+        <link href="../css/maincreate.css" rel="stylesheet" type="text/css" >
+        <script type="text/javascript" src="../js/helpers.js"></script>
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <button type="button" onclick="grade()" id="grade" class="button"></button>
+        <button type="button" onclick="create()" id="create" class="button"></button>
+        <div id="savedtests">
+            <div class="displayItems" data-what="edit"></div>
+        </div>
+        <form class="studentsinformation">
+        <input type="text" autofocus placeholder="Teilen mit: example@exapmle.com, etc." class="students" name="students" pattern="[a-z0-9]+"oninput="this.reportValidity()">
+        </form>
+
+        <button type="button" onclick="home()" id="home" class="button"></button>
+        <script type="text/javascript" src="../js/maincreate.js"></script>
+    </body>
+</html>

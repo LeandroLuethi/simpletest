@@ -1,0 +1,1 @@
+{"title":"Test","subject":"Deutsch","questions":[{"question":"Frage 1","points":"2","answers":[{"answer":"a1","correct":false},{"answer":"a2","correct":true},{"answer":"a3","correct":false}]},{"question":"Frage 3","points":"2","answers":[{"answer":"a4","correct":false},{"answer":"a5","correct":false},{"answer":"a6","correct":true}]}]}

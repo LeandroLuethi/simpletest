@@ -1,0 +1,437 @@
+html{
+    font-family: 'Poppins';
+}
+body{
+    margin:0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    background-color: black;
+    font-family: 'Poppins';
+}
+h2{
+    color:white;
+}
+h3{
+    color: green;
+    background: #ffffff7d;
+    size: 1.5rem;
+}
+*, *::before, *::after{ box-sizing: border-box;}
+
+
+
+button{
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    margin: 0px; 
+    display:block;
+    background-position: right bottom;
+    background-size: cover;
+
+    
+}
+
+.start{
+    opacity: 0.6;
+    transition: 0.5s;
+    font-size:1.3rem;
+}
+
+.start:hover{
+    opacity: 1;
+    min-width: 35%;
+    font-size: 1.4rem;
+ }
+
+ .start:active{
+    font-size: 20px;
+    min-width: 40%;
+}
+
+#complete{
+    height:95vh;
+    width: 33.34%;
+    background-color:cyan;
+    background-image: url(../img/absolvieren1.jpg);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    
+}
+#evaluation{
+    height:95vh;
+    width: 33.33%;
+    background-color: blue;
+    background-image: url(../img/auswertung.jpg);
+    background-repeat: no-repeat;
+}
+
+#create{
+    height:95vh;
+    width: 33.33%;
+    background-color: darkblue;
+    background-image: url(../img/erstellen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home{
+    position:absolute;
+    top:95vh;
+    left:0%;
+    height:5vh;
+    width: 5vh;
+    border: none;
+    color:white;
+    background-color: black;
+    background-image: url(../img/Home.png);
+    background-repeat: no-repeat;
+    display: none;
+    opacity: 1;
+    transition: 0.1s;
+
+}
+
+#home:hover{
+    opacity: 0.8;
+}
+
+#logo{
+    background-color: transparent;
+    background-image: url(../img/Simpletest\ Logo.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    bottom: 0vh;
+    left: 45%;
+    right: 45%;
+    width: 10%;
+    height: 5vh;
+
+}
+
+#menu{
+    position:absolute;
+    right:0%;
+    bottom: 0%;
+    height:5vh;
+    width: 5vh;
+    background-color:black;
+    background-image: url(../img/Benutzer.png);
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition:0.1s;
+}
+#menu:hover{
+    opacity: 0.8;
+}
+
+
+.fach{
+    display: none;
+    height: 47.5vh;
+    width:20%;
+    opacity: 0.6;
+    transition: 0.2s;
+    font-size:1rem;
+}
+
+.zeile{
+    display:none;
+    height: 47.5vh;
+    width: 20%;
+    opacity: 0.6;
+    transition: 0.2s;
+    font-size:1rem;
+}
+
+#deutsch1{
+    background-color:rgb(90,90,255);
+    background-image: url(../img/deutsch.jpg);
+    background-repeat: no-repeat;
+}
+#franz1{
+    background-color: rgb(70,70,255);
+    background-image: url(../img/franz2.jpeg);
+    background-repeat: no-repeat;
+}
+#math1{
+    background-color: rgb(30,30,255);
+    background-image: url(../img/math3.jpeg);
+    background-repeat: no-repeat; 
+}
+#geo1{
+    background-color: rgb(0,0,220);
+    background-image: url(../img/geografie.jpg);
+    background-repeat: no-repeat;
+}
+#eng1{
+    background-color: rgb(0, 0, 180);
+    background-image: url(../img/englisch2.jpeg);
+    background-repeat: no-repeat;
+}
+
+#nmg1{
+    position:absolute;
+    top:47.5vh;
+    background-color: rgb(90,90,255);
+    background-image: url(../img/nmg.jpg);
+    background-repeat: no-repeat;
+}
+#musik1{
+    position: absolute;
+    top:47.5vh;
+    left:20%;
+    background-color: rgb(70,70,255);
+    background-image: url(../img/musik.jpg);
+    background-repeat: no-repeat;
+}
+#bg1{
+    position: absolute;
+    top:47.5vh; 
+    left:40%;
+    background-color: rgb(30,30,255);  
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+}
+#info1{
+    position: absolute;
+    top:47.5vh;
+    left:60%;
+    background-color: rgb(0,0,220);
+    background-image: url(../img/informatik4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#hw1{
+    position: absolute;
+    top:47.5vh;
+    left:80%;
+    background-color: rgb(0, 0, 180);
+    background-image: url(../img/hw.jpg);
+    background-repeat: no-repeat;
+}
+
+.zeile:hover, .fach:hover{
+    opacity: 1;
+    font-size: 1.2rem;
+}
+.zeile:active, .fach:active{
+    opacity: 1;
+    font-size: 18px;
+}
+
+
+@media screen and (max-width:780px) {
+
+    body{
+        overflow-y: visible;
+    }
+
+    .start{
+        opacity: 0.8;
+        transition: 0.5s;
+        font-size: 1.1rem;
+    }
+
+    .start:hover{
+        opacity: 1;
+        min-width: 35%;
+        font-size: 1.2rem;
+    }
+
+    #logo, #userDisplay{
+        display: none;
+    }
+    #home, #menu{
+        background-color: transparent;
+        border:none;
+        z-index: 9999;
+        position:fixed;
+        bottom:0%;
+        top:93vh;
+        width:7vh;
+        height:7vh;
+    }
+
+    #complete{
+        height: 31vh;
+        min-width:100%;
+        background-image: url(../img/absolvieren.jpg);
+    }
+    #evaluation{
+        height: 31vh;
+        min-width:100%;
+        position: absolute;
+        top: 31vh;
+        background-image: url(../img/auswertung2.jpg);
+    }
+    #create{
+        height: 31vh;
+        min-width:100%;
+        position:absolute;
+        top: 62vh;
+        background-image: url(../img/erstellen2.jpg)
+    }
+
+    .fach, .zeile{
+        display: none;
+        height: 31vh;
+        opacity: 0.8;
+        transition: 0.2s;
+        font-size:1rem;
+    }
+
+    .fach{
+        min-width:50%;
+    }
+    .zeile{
+        width: 50%;
+    }
+
+    .zeile:hover, .fach:hover{
+        opacity: 1;
+        font-size: 1.1rem;
+    }
+
+    .zeile:active, .fach:active{
+        font-size: 1.2rem;
+    }
+
+    #deutsch1{
+        background-color: rgb(90,90,255);
+        background-image: url(../img/deutsch.jpg);
+        background-repeat: no-repeat;
+    }
+    #franz1{
+        background-color: rgb(70,70,255);
+        background-image: url(../img/franz.jpg);
+        background-repeat: no-repeat;
+    }
+    #math1{
+        background-color: rgb(30,30,255);
+        background-image: url(../img/math.jpg);
+        background-repeat: no-repeat; 
+        position:absolute;
+        top:31vh;
+        left: 0%;
+    }
+    #geo1{
+        background-color: rgb(0,0,220);
+        background-image: url(../img/geografie.jpg);
+        background-repeat: no-repeat;
+        position:absolute;
+        top:31vh;
+        right: 0%;
+    }
+    #eng1{
+        background-color: rgb(0, 0, 180);
+        background-image: url(../img/englisch.jpg);
+        background-repeat: no-repeat;
+        position:absolute;
+        top:62vh;
+        left: 0%;
+    }
+    
+    #nmg1{
+        background-color: rgb(90,90,255);
+        background-image: url(../img/nmg.jpg);
+        background-repeat: no-repeat;
+        position:absolute;
+        top:62vh;
+        right: 0%;
+    }
+    #musik1{
+        background-color: rgb(70,70,255);
+        background-image: url(../img/musik.jpg);
+        background-repeat: no-repeat;
+        position:absolute;
+        top:93vh;
+        left: 0%;
+    }
+    #bg1{
+        background-color: rgb(30,30,255);  
+        background-image: url(../img/bg.jpg);
+        background-repeat: no-repeat;
+        position:absolute;
+        top:93vh;
+        right: 0%;
+        left:50%;
+    }
+    #info1{
+        background-color: rgb(0,0,220);
+        background-image: url(../img/informatik.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position:absolute;
+        top:124vh;
+        left: 0%;
+    }
+    #hw1{
+        background-color: rgb(0, 0, 180);
+        background-image: url(../img/hw.jpg);
+        background-repeat: no-repeat;
+        position:absolute;
+        top:124vh;
+        right: 0%;
+        left: 50%;
+    }
+}
+
+@media screen and (min-width:1900px){
+    .zeile, .fach{
+        font-size: 1.3rem;
+    }
+
+    .zeile:hover, .fach:hover{
+        opacity: 1;
+        font-size: 1.6rem;
+    }
+
+    .zeile:active, .fach:active{
+        opacity: 1;
+        font-size: 20px;
+    }
+
+    .start{
+        font-size:1.6rem;
+    }
+    
+    .start:hover{
+        font-size: 1.8rem;
+     }
+    
+     .start:active{
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width:2100px){
+    .zeile, .fach{
+        font-size: 1.6rem;
+    }
+
+    .zeile:hover, .fach:hover{
+        opacity: 1;
+        font-size: 1.9rem;
+    }
+
+    .zeile:active, .fach:active{
+        opacity: 1;
+        font-size: 22px;
+    }
+
+    .start{
+        font-size:2rem;
+    }
+    
+    .start:hover{
+        font-size: 2.2rem;
+     }
+    
+     .start:active{
+        font-size: 30px;
+    }
+}
+
+

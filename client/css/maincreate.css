@@ -1,0 +1,127 @@
+body{
+    background-color: #021c31;
+    font-size: 1.2rem;
+}
+
+#savedtests{
+    background-color: lightblue;
+    width: 80%;
+    height: 60vh;
+    margin-left: 10%;
+    margin-top: 20vh;
+    border-radius:10px;
+    overflow-y: auto;
+}
+
+.button{
+    background: none;
+    background-color: #021c31;
+    filter:brightness(100%);
+    transition: 0.1s;
+    border:none;
+}
+
+.button:hover{
+    filter:brightness(80%)
+}
+
+#create{
+    background-image: url(../img/Plus.png);
+    background-size: cover;
+    width: 7vh;
+    height: 7vh;
+    border: none;
+    position:absolute;
+    right:4%;
+    top:6vh;
+}
+
+#home{
+    background-image: url(../img/Home.png);
+    background-size: cover;
+    position : absolute;
+    left: 4%;
+    top:6vh;
+    border:none;
+    width:7vh;
+    height: 7vh;
+}
+
+.students{
+    background-color: lightblue;
+    width: 80%;
+    height: 10vh;
+    margin-left: 10%;
+    margin-top: 2vh;
+    border-radius:10px;
+    overflow-y: auto;
+    border:none;
+    font-size:1.2rem;
+}
+
+#grade{
+    background-image: url(../img/grade.png);
+    background-size: cover;
+    width: 6vh;
+    height: 7vh;
+    border: none;
+    position:absolute;
+    right:48%;
+    top:6vh;
+}
+
+.displayItems{
+    background-color: lightblue;
+    width: 80%;
+    height: 60vh;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    border-radius:10px;
+    overflow-y: auto;
+}
+
+.distribute{
+   background-image: url(../img/shareicon.png.png);
+   background-size: cover;
+   border-radius: 5px;
+   height: 3vh;
+   width: 3vh; 
+   background-color: rgba(112, 228, 3, 0.692);    
+}
+.distribute:hover{
+    transition:200ms;
+    background-color: rgba(144, 238, 144, 0.9);
+    border-color: rgba(0, 128, 0, 0.9);
+    transform:scale(1.2);
+  }
+
+.solution{
+    background-image: url(../img/korrigieren.png);
+    background-size: cover;
+    background-color: orange;
+    width:3vh;
+    height:3vh;
+}
+.solution:hover{
+    transition: 200ms;
+    background-color: rgb(255, 217, 0);
+    border-color: rgb(255, 145, 0);
+    transform:scale(1.2);
+}
+
+@media screen and (max-width: 780px){
+
+}
+
+@media screen and (min-width: 1400px){
+body{
+   font-size: 1.7rem; 
+}
+
+.distribute, .solution{
+    height: 3vh;
+    width: 3vh;
+}
+
+
+}

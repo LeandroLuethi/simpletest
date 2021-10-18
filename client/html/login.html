@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html> <!--https://www.youtube.com/watch?v=3GsKEtBcGTk tutorial-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>SimpleTest-Login</title>
+
+        <link href="../css/login.css" rel="stylesheet" type="text/css" >
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/helpers.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <form class="form" id="login">
+                <h1 class="form_title">Login</h1>
+                <div class="form_message form_message-error"></div>
+                <div class="form_input-group">
+                    <input name="user" type="text" class="form_input" autofocus placeholder="Username or e-mail">
+                    <div class="form_input-error-message"></div>
+                </div>
+                <div class="form_input-group">
+                    <input name="pw" type="password" class="form_input" autofocus placeholder="Password">
+                    <div class="form_input-error-message"></div>
+                </div>
+                <button type="submit" class="form_button">Login</button>
+                <p class="form_text">
+                    <a onclick="forgpassword()" class="form_link">Forgot your password?</a>
+                </p>
+                <p class="form_text">
+                    <a class="form_link" id="linkcreateAccount">Don't have an account? Create account</a>
+                </p>
+            </form>
+            <form class="form form-hidden" id="createAccount">
+                <h1 class="form_title">Create Account</h1>
+                <div class="form_message form_message-error"></div>
+                <div class="form_input-group">
+                    <input name="user" type="text" id="signupUsername" class="form_input" autofocus placeholder="Username" pattern="[a-z0-9]+" oninput="this.reportValidity()"><!--Hiermit sonderzeichen ausgeschlossen?-->
+                    <div class="form_input-error-message"></div>
+                </div>
+                <div class="form_input-group">
+                    <input name="email" type="text" class="form_input" autofocus placeholder="E-mail Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninput="this.reportValidity()">
+                    <div class="form_input-error-message"></div>
+                </div>
+                <div class="form_input-group">
+                    <input name="pw" type="password" class="form_input" id="signupPassword" autofocus placeholder="Password">
+                    <div class="form_input-error-message"></div>
+                </div>
+                <div class="form_input-group">
+                    <input name="pw2" type="password" class="form_input" autofocus placeholder="Confirm Password">
+                    <div class="form_input-error-message"></div>
+                </div>
+                <button type="submit" class="form_button">Login</button>
+                <p class="form_text">
+                    <a class="form_link" id="linkLogin">Already have an account? Sign in</a>
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

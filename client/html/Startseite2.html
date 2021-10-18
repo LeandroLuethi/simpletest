@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+                <!-- Für Apple-Geräte -->
+                <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon-180x180.png">
+                <!-- Für Browser -->
+                <link rel="shortcut icon" type="image/x-icon" href="../img/favicon/favicon-32x32.ico">
+                <!--Für Android-Geräte-->
+                <link rel="android-touch-icon" sizes="192x192" href="../img/favicon/android-icon-192x192.png">
+
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>SimpleTest</title>
+
+        <link href="../css/Startseite.css" rel="stylesheet" type="text/css" >
+        <script type="text/javascript" src="../js/helpers.js"></script>
+        <script type="text/javascript" src="../js/Startseite.js"></script>
+
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <button type="button" id="complete" onclick="complete();" class="start" ><h2>Absolvieren</h2></button>  
+        <button type="button" id="evaluation" onclick="evaluation(); " class="start"><h2>Auswertung</h2></button>
+        <button type="button" id="create" onclick="create()"class="start"><h2>Erstellen</h2></button>
+      
+
+            <br>
+                <button type="button" id="home" onclick="home()"></button>
+                <img id="logo" src="../img/Simpletest Logo.png">
+                <button type="menu"   id="menu" onclick="menu()"></button>
+
+
+        <button type="button" id="deutsch1"class="fach" onclick="help('de')"><h3>Deutsch</h3></button>
+        <button type="button" id="franz1" class="fach" onclick="help('fr')"><h3>Französisch</h3></button>
+        <button type="button" id="math1" class="fach" onclick="help('ma')"><h3>Mathematik</h3></button>
+        <button type="button" id="geo1" class="fach" onclick="help('ge')"><h3>Geo/Gesch.</h3></button>
+        <button type="button" id="eng1" class="fach" onclick="help('en')"><h3>Englisch</h3></button>
+   
+        <button type="button" id="nmg1"  class="zeile" onclick="help('nw')"><h3>Naturwissenschaften</h3></button>
+        <button type="button" id="musik1" class="zeile" onclick="help('mu')"><h3>Musik</h3></button>
+        <button type="button" id="bg1" class="zeile" onclick="help('bg')"><h3>Bildnerisches Gestalten</h3></button>
+        <button type="button" id="info1" class="zeile" onclick="help('in')"><h3>Informatik</h3></button>
+        <button type="button" id="hw1" class="zeile" onclick="help('hw')"><h3>Hauswirtschaft</h3></button>
+
+    </body>
+</html>

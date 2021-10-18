@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Erstellen</title>
+
+        <link href="../css/create.css" rel="stylesheet" type="text/css" >
+        <script type="text/javascript" src="../js/helpers.js"></script>
+        <script type="text/javascript" src="../js/create.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <div id="documentElement"> 
+        <form id="documentname" action="#">
+            <div id="documenttitle">
+                <input type="text" name="documenttitle" autofocus placeholder="Titel" id="title" name="">
+            </div>
+       
+            <label><h4>Fach:</h4>
+                <select id="selectsubject" name="subject">
+                    <option>Bildnerisches Gestalten</option>
+                    <option>Deutsch</option>
+                    <option>Englisch</option>
+                    <option>Französisch</option>
+                    <option>Geografie/Geschichte</option>
+                    <option>Hauswirtschaft</option>
+                    <option>Informatik</option>
+                    <option>Mathematik</option>
+                    <option>Musik</option>
+                    <option>Naturwissenschaften</option> 
+                </select>
+            </label>
+        </form>
+    </div>
+
+    <div id="all">
+        <form class="createTask" name="questionandanswers">
+            <div class="pointsdiv">
+                <input autofocus placeholder="Pt." type="number" class="points" name="points">
+            </div>
+            
+            <div class="containerquestion">
+                <input type="text" autofocus placeholder="Frage" class="question" name="question">
+            </div>
+            <div class="containeranswers">
+                <div class="choose">
+                    <input type="checkbox" class="checkbox" name="isCorrect1">
+                    <input type="text" autofocus placeholder="Antworten" class="answer" name="answer1">
+                </div>
+                <div class="choose">
+                    <input type="checkbox" class="checkbox" name="isCorrect2">
+                    <input type="text" autofocus placeholder="Antworten" class="answer" name="answer2">
+                </div>
+                <div class="choose">
+                    <input type="checkbox" class="checkbox" name="isCorrect3">
+                    <input type="text" autofocus placeholder="Antworten" class="answer" name="answer3">
+                </div>
+                <div class="choose">
+                    <input type="checkbox" class="checkbox" name="isCorrect4">
+                    <input type="text" autofocus placeholder="Antworten" class="answer" name="answer4">
+                </div>
+                <div class="choose">
+                    <input type="checkbox" class="checkbox" name="isCorrect5">
+                    <input type="text" autofocus placeholder="Antworten" class="answer" name="answer5">
+                </div>
+                <div class="choose">
+                    <input type="checkbox" class="checkbox" name="isCorrect6">
+                    <input type="text" autofocus placeholder="Antworten" class="answer" name="answer6">
+                </div>
+                <div class="choose">
+                    <input type="checkbox" class="checkbox" name="isCorrect7">
+                    <input type="text" autofocus placeholder="Antworten" class="answer" name="answer7">
+                </div>
+                <div class="choose">
+                    <input type="checkbox" class="checkbox" name="isCorrect8">
+                    <input type="text" autofocus placeholder="Antworten" class="answer" name="answer8">
+                </div>
+                <div class="choose">
+                    <input type="checkbox" class="checkbox" name="isCorrect9">
+                    <input type="text" autofocus placeholder="Antworten" class="answer" name="answer9">
+                </div>
+                <div class="choose">
+                    <input type="checkbox" class="checkbox" name="isCorrect10">
+                    <input type="text" autofocus placeholder="Antworten" class="answer" name="answer10">
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <!--Dies ist ein Kommentar-->
+       
+        <button type="button" onclick="next()" id="next" class="button"></button>
+        <button type="button" onclick="back()" id="back" class="button"></button>
+        <button type="button" onclick="add()" id="more" class="button"></button>
+        <button type="button" onclick="save()" id="save" class="button"></button>
+    </body>
+</html>
