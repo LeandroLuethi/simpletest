@@ -81,7 +81,6 @@ async function signUp(data) {
 }
 
 async function signIn(data) {
-    data.email = data.email.toLowerCase()
     var response = await postData("signIn", data)
     console.log(response);
     if(response.ok) {
