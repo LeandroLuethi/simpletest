@@ -37,11 +37,11 @@
                 <h1 class="form_title">Create Account</h1>
                 <div class="form_message form_message-error"></div>
                 <div class="form_input-group">
-                    <input name="user" type="text" id="signupUsername" class="form_input" autofocus placeholder="Username" pattern="[a-z0-9]+" oninput="this.reportValidity()"><!--Hiermit sonderzeichen ausgeschlossen?-->
+                    <input name="user" type="text" id="signupUsername" class="form_input" autofocus placeholder="Username">
                     <div class="form_input-error-message"></div>
                 </div>
                 <div class="form_input-group">
-                    <input name="email" type="text" class="form_input" autofocus placeholder="E-mail Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninput="this.reportValidity()">
+                    <input id="signupEmail" name="email" type="text" class="form_input" autofocus placeholder="E-mail Address">
                     <div class="form_input-error-message"></div>
                 </div>
                 <div class="form_input-group">

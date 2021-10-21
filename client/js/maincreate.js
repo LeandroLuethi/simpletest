@@ -30,7 +30,7 @@ function displayItem(item, category){
 async function distribute(teacher, id) {
     var form = document.querySelector(".studentsinformation");
     var rawdata = collectFormData(form);
-    var users = rawdata.students.split(/[\s,;]+/)
+    var users = rawdata.students.split(/[\s,;]+/).map(address=>address.toLowerCase())
     await postDataWithToken("distribute", {teacher, id, users})
     form.reset();
 }

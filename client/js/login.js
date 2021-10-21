@@ -1,3 +1,4 @@
+var help = 0;
 function setFormMessage(formElement, type, message){
     const messageElement = formElement.querySelector(".form_message");
 
@@ -45,23 +46,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     document.querySelectorAll(".form_input").forEach(inputElement => {
-        inputElement.addEventListener("blur", e=> {
-            if(e.target.id==="signupUsername" && e.target.value.length>0 && e.target.value.length<5){
-                setInputError(inputElement, "Username must be at least 5 characters in length");
-                // @TODO: allow only safe characters for username 
+
+           inputElement.addEventListener("blur", e=> {
+            
+            console.log(143);
+            if(e.target.id==="signupUsername" && !e.target.value.match(/^[A-z0-9_]{3,20}$/)){
+                setInputError(inputElement, "Username must be 3-20 characters long and cannot contain any special characters");
             }
-            if(e.target.id==="signupPassword" && e.target.value.length> 0 && e.target.value.length < 7){
+            if(e.target.id==="signupEmail" && !e.target.value.match(/^[A-z0-9._%+-]+@[A-z0-9.-]+\.[a-z]{2,}$/)){
+                setInputError(inputElement, "No email address recognized");
+            }
+            if(e.target.id==="signupPassword" && e.target.value.length>= 0 && e.target.value.length < 7){
                 setInputError(inputElement, "Password must be at least 7 characters in length")
             }
-        });
-
+        }); 
+       
         inputElement.addEventListener("input", e => {
             clearInputError(inputElement);
-        });
+        }); 
     });
 });
 
+
 async function signUp(data) {
+    data.email = data.email.toLowerCase();
     var response = await postData("signUp", data)
     if(response.ok) {
         localStorage.simpletest_userdata = JSON.stringify(response.data)
@@ -73,6 +81,7 @@ async function signUp(data) {
 }
 
 async function signIn(data) {
+    data.email = data.email.toLowerCase()
     var response = await postData("signIn", data)
     console.log(response);
     if(response.ok) {

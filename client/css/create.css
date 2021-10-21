@@ -41,6 +41,7 @@ p{
 }
 
 .points{
+    font-size: 2.5rem;
     min-height: 6vh;
     max-width: 6vh;
     border-radius: 5px;
@@ -167,7 +168,19 @@ textarea:focus, input:focus{
     bottom: 5vh;
 }
 
+.checkbox{
+    margin-left: 2%;
+}
+
 @media screen and (min-width:400px) and (max-width:780px){
+    .checkbox{
+        -ms-transform: scale(2); /* IE */
+        -moz-transform: scale(2); /* FF */
+        -webkit-transform: scale(2); /* Safari and Chrome */
+        -o-transform: scale(2); /* Opera */
+        transform: scale(2);
+        padding: 10px;    
+    }
  
     #documentElement{
         position: absolute;
@@ -175,7 +188,7 @@ textarea:focus, input:focus{
     }
 
     .answer{
-        font-size: 25px;;
+        font-size: 1.5rem;;
         width:85%;
     }
 
@@ -205,6 +218,14 @@ textarea:focus, input:focus{
 }
 
 @media screen and (max-width:400px){
+    .checkbox{
+        -ms-transform: scale(1.5); /* IE */
+        -moz-transform: scale(1.5); /* FF */
+        -webkit-transform: scale(1.5); /* Safari and Chrome */
+        -o-transform: scale(1.5); /* Opera */
+        transform: scale(1.5);
+        padding: 10px;    
+    }
 
     #documentElement{
         position: absolute;
@@ -212,14 +233,18 @@ textarea:focus, input:focus{
     }
 
     .answer{
-        font-size: 20px;
-        max-width:50%;
+        font-size: 1.1rem;
+        width:50%;
         }
 
     .pointsdiv{
         position:absolute;
         right: 25%;
         top: 1vh;
+    }
+
+    .points{
+        font-size: 1.5rem;
     }
 
     #more{
@@ -239,13 +264,22 @@ textarea:focus, input:focus{
     }
 }
 
-@media screen and (min-width:1600px){
+@media screen and (min-width:1300px){
     .question{
-        font-size:40px;
+        font-size:3rem;
+    }
+    
+    .checkbox{
+        -ms-transform: scale(2); /* IE */
+        -moz-transform: scale(2); /* FF */
+        -webkit-transform: scale(2); /* Safari and Chrome */
+        -o-transform: scale(2); /* Opera */
+        transform: scale(2);
+        padding: 10px;    
     }
 
     .answer{
-        font-size:30px;
+        font-size:2rem;
     }
 
     #title{
@@ -258,5 +292,24 @@ textarea:focus, input:focus{
 
     h4{
         font-size:1.5rem;
+    }
+}
+
+@media screen and (min-width: 2100px){
+    .question{
+        font-size:4rem;
+    }
+
+    .checkbox{
+        -ms-transform: scale(2); /* IE */
+        -moz-transform: scale(2); /* FF */
+        -webkit-transform: scale(2); /* Safari and Chrome */
+        -o-transform: scale(2); /* Opera */
+        transform: scale(2);
+        padding: 10px;    
+    }
+
+    .answer{
+        font-size:2.5rem;
     }
 }

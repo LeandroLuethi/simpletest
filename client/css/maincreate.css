@@ -56,7 +56,7 @@ body{
     border-radius:10px;
     overflow-y: auto;
     border:none;
-    font-size:1.2rem;
+    font-size:1.5rem;
 }
 
 #grade{
@@ -123,5 +123,10 @@ body{
     width: 3vh;
 }
 
+}
 
+@media screen and (min-width:2100px){
+    .students{
+        font-size: 2rem;
+    }
 }
