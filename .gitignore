@@ -1,7 +1,7 @@
 node_modules
 archiv
 .vscode
-aktuell/server/data
+server/data
 fix
 .DS_Store
 aktuell
