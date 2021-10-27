@@ -77,12 +77,12 @@ function getQueryVariable(variable){
 
 subjLongNames = {
     de: "Deutsch",
-    bg: "Bildnerisches Gestalten",
+    bg: "Bil. Gestalten",
     fr: "Französisch",
     ma: "Mathematik",
-    ge: "Geographie und Geschichte",
+    ge: "Geo. & Gesch.",
     en: "Englisch",
-    nw: "Naturwissenschaften",
+    nw: "NaWi",
     mu: "Musik",
     in: "Informatik",
     hw: "Hauswirtschaft"

@@ -3,7 +3,6 @@
 async function displayItems(subject){
     var itemsElements = document.querySelectorAll(".displayItems");
     for(var itemsElement of itemsElements) {
-        var category = itemsElement.dataset.what
         var {user} = userData
         var items = await postDataWithToken("loadAll", {
             path: user+"/complete"
