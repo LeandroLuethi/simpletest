@@ -3,14 +3,11 @@ const { signUp, signIn, saveData, loadData, loadTest, loadAll, distribute, finis
 const { servestatic } = require('./servestatic');
 
 createServer(answer).listen(8080);
-console.log("Server listening on port http://localhost:8080")
 
 async function answer(req, res) {
 
 	if(req.url == "/signUp") 	{return signUp(req, res)}
 	if(req.url == "/signIn") 	{return signIn(req, res)}
-
-	//console.log(req.url);
 	if(req.url == "/saveData") 	{return saveData(req, res)}
 	if(req.url == "/loadData") 	{return loadData(req, res)}
 	if(req.url == "/loadTest") 	{return loadTest(req, res)}

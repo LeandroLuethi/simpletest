@@ -16,7 +16,6 @@ function testtitle(){
 		data.subject = datatitle.subject
 		data.teacher = userData.user 
 		data.questions = []
-		console.log(data);
 		all.style.display = "block";
 		documentElement.style.display = "none";
 		return true;
@@ -27,7 +26,6 @@ function testtitle(){
 async function savequestion(){
 	var form = document.querySelector(".createTask")
 	var rawdata = collectFormData(form)
-	console.log(form, rawdata); 
 	var questiondata = {
 		question: rawdata.question,
 		points: rawdata.points,
@@ -72,7 +70,6 @@ async function add(){
 async function back(){
 	var form = document.querySelector(".createTask")
 	var rawdata = collectFormData(form)
-	console.log(currentIndex, nexthelp);
 	if(currentIndex == 0) {
 		return
 	}
@@ -91,7 +88,6 @@ async function back(){
 
 async function next(){
 	var form = document.querySelector(".createTask")
-	console.log(currentIndex, nexthelp);
 	if(currentIndex >= nexthelp){
 		return
 	}
@@ -103,6 +99,5 @@ async function next(){
 
 async function save(){
 	const r = await savequestion()
-	console.log(r);
 	if(r.ok) location.assign("maincreate.html");
 } 

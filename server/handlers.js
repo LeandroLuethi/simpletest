@@ -1,13 +1,8 @@
-// const {pbkdf2Sync} = require('crypto');
 const { parseJsonBody } = require("./parsers");
 const { respondWithJson } = require("./responders");
 const { load, save, doesItemExist, createFolder, loadAllOfDirectory, distributeTest, deleteFile } = require("./datastore");
 const bcrypt = require('bcryptjs');
-
 const salt = "cz6rtbf7uth8iuoiuzg6rdx4rweas4tf3rtefi87ujoiznhg6u5ted53fewrdtguz"
-
-// const key = pbkdf2Sync('secret', 'salt', 100000, 64, 'sha512');
-// console.log(key.toString('hex'));  // '3745e48...08d59ae'
 
 async function createToken(user) {
 	const token = String(Math.round(Math.random() * 1e15))
@@ -36,8 +31,6 @@ async function signUp(req, res) {
 	}
 
 	const hash = await bcrypt.hash(pw + salt, 10)
-
-	//console.log(hash);
 
 	await save(`${user}/userdata.json`, {hash, email, user})
 	await createFolder(`${user}/create`)
@@ -73,7 +66,6 @@ async function signIn(req, res) {
 
 async function saveData(req, res) {
 	const {path, data, user, token} = await parseJsonBody(req)
-	console.log(data);
 	if(!await verifyToken(user, token, res)) return
 	await save(path, data)
 	respondWithJson(res, {ok: true})
@@ -107,7 +99,6 @@ async function loadTest(req, res) {
 async function distribute(req, res) {
 	const {teacher, id, users, user, token} = await parseJsonBody(req)
 	if(!await verifyToken(user, token, res)) return
-	//console.log({teacher, id, users});
 	distributeTest(teacher, id, users)
 }
 
@@ -122,10 +113,9 @@ async function finishTest(req, res){
 async function solution(req, res) {
 	const {teacher, id, user, token} = await parseJsonBody(req)
 	if(!await verifyToken(user, token, res)) return
-	console.log({teacher, id});
 	const usertests = (await loadAllOfDirectory(`${teacher}/create/finished`))
 		.filter(item=>item.id.endsWith(id))
-	var {questions, title, subject} = await load(`${teacher}/create/edit/${id}`); //path??
+	var {questions, title, subject} = await load(`${teacher}/create/edit/${id}`);
 	let users = []
 	for(let usertest of usertests) {
 		const points = [];
@@ -137,7 +127,6 @@ async function solution(req, res) {
 			let p = 0
 			const userselected = usertest[nr].selected;
 			const correct = questions[nr].answers.map(a=>a.correct);
-			console.log({userselected, correct});
 			for(let i=0; i<userselected.length; i++){
 				if(userselected[i] == correct[i]){
 					p++;
@@ -150,8 +139,7 @@ async function solution(req, res) {
 			allpoints= allpoints+(p/correct.length * questions[nr].points);
 			allpointsmax=allpointsmax+Number(questions[nr].points);
 		}
-		console.log(usertest);
-		console.log(user);
+
 		const percentage = allpoints/allpointsmax*100;
 		let grade;
 		if(percentage<=25){
@@ -187,7 +175,7 @@ async function solution(req, res) {
 		else if(percentage>94.4 && percentage<=100){
 			grade=6;
 		}
-		console.log(allpoints, allpointsmax, percentage);
+
 		users.push({user, points, percentage, grade})
 		await save(`${user}/evaluation/${id}`, {points, percentage, grade, subject, title} );
 	}

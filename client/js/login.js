@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
            inputElement.addEventListener("blur", e=> {
             
-            console.log(143);
             if(e.target.id==="signupUsername" && !e.target.value.match(/^[A-z0-9_]{3,20}$/)){
                 setInputError(inputElement, "Username must be 3-20 characters long and cannot contain any special characters");
             }
@@ -82,7 +81,6 @@ async function signUp(data) {
 
 async function signIn(data) {
     var response = await postData("signIn", data)
-    console.log(response);
     if(response.ok) {
         localStorage.simpletest_userdata = JSON.stringify(response.data)
         location.href = "Startseite2.html";

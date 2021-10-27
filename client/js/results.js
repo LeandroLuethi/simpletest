@@ -15,7 +15,6 @@ async function displayItems(){
         var items = await postDataWithToken("loadAll", {
             path: user+"/results"
         })
-        console.log(items);
         for(var item of items) {
             itemsElement.innerHTML += displayItem(item)
         }

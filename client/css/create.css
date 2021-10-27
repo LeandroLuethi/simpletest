@@ -174,10 +174,10 @@ textarea:focus, input:focus{
 
 @media screen and (min-width:400px) and (max-width:780px){
     .checkbox{
-        -ms-transform: scale(2); /* IE */
-        -moz-transform: scale(2); /* FF */
-        -webkit-transform: scale(2); /* Safari and Chrome */
-        -o-transform: scale(2); /* Opera */
+        -ms-transform: scale(2);  
+        -moz-transform: scale(2);
+        -webkit-transform: scale(2); 
+        -o-transform: scale(2);
         transform: scale(2);
         padding: 10px;    
     }
@@ -219,10 +219,10 @@ textarea:focus, input:focus{
 
 @media screen and (max-width:400px){
     .checkbox{
-        -ms-transform: scale(1.5); /* IE */
-        -moz-transform: scale(1.5); /* FF */
-        -webkit-transform: scale(1.5); /* Safari and Chrome */
-        -o-transform: scale(1.5); /* Opera */
+        -ms-transform: scale(1.5);  
+        -moz-transform: scale(1.5); 
+        -webkit-transform: scale(1.5); 
+        -o-transform: scale(1.5); 
         transform: scale(1.5);
         padding: 10px;    
     }
@@ -270,10 +270,10 @@ textarea:focus, input:focus{
     }
     
     .checkbox{
-        -ms-transform: scale(2); /* IE */
-        -moz-transform: scale(2); /* FF */
-        -webkit-transform: scale(2); /* Safari and Chrome */
-        -o-transform: scale(2); /* Opera */
+        -ms-transform: scale(2); 
+        -moz-transform: scale(2); 
+        -webkit-transform: scale(2); 
+        -o-transform: scale(2); 
         transform: scale(2);
         padding: 10px;    
     }
@@ -301,10 +301,10 @@ textarea:focus, input:focus{
     }
 
     .checkbox{
-        -ms-transform: scale(2); /* IE */
-        -moz-transform: scale(2); /* FF */
-        -webkit-transform: scale(2); /* Safari and Chrome */
-        -o-transform: scale(2); /* Opera */
+        -ms-transform: scale(2); 
+        -moz-transform: scale(2); 
+        -webkit-transform: scale(2); 
+        -o-transform: scale(2); 
         transform: scale(2);
         padding: 10px;    
     }

@@ -7,7 +7,6 @@ var teacher = getQueryVariable("teacher")
 
 async function loadTest() {
    test = await postDataWithToken("loadTest", {path: `${teacher}/create/edit/${testid}`})
-   console.log(test);
    loadQuestionstate(test)
    loadQuestion(test.questions[currentIndex]);
 }
@@ -40,7 +39,6 @@ function mark(){
 function savestate() {
 	var form = document.querySelector("#answers")
 	var data = collectFormData(form)
-	console.log(data);
 	questionstate[currentIndex].selected = Object.values(data);
 	localStorage[`simpletest-questionstate-${testid}`] = JSON.stringify(questionstate);
 }
@@ -48,13 +46,11 @@ function savestate() {
 async function finish(){
    if(window.confirm("Willst du den Test wirklich beenden?")){
 		var r = await postDataWithToken("finishTest", {teacher, user: userData.user, testid, data: questionstate})
-		console.log(123, r);
 		location.assign("../Startseite2.html");
    }
 }
 
 function loadQuestion(question){
-	console.log("lq", question);
     var title = question.question
 	var points = question.points+" Pt."
 	if(questionstate[currentIndex].marked) {
@@ -90,7 +86,6 @@ function back(){
 }
 
 function next(){
-	console.log(currentIndex, test.questions[currentIndex]);
 	if(currentIndex >= test.questions.length - 1){
 		return
 	}

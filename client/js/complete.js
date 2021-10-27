@@ -8,7 +8,6 @@ async function displayItems(subject){
         var items = await postDataWithToken("loadAll", {
             path: user+"/complete"
         });
-        console.log(items);
         for(var item of items) {
             itemsElement.innerHTML += displayItem(item, subject)
         }
@@ -18,7 +17,6 @@ async function displayItems(subject){
     function displayItem(item, subject){
         if(item.subject == subject) {
             var link = "facher/complete"
-            console.log(`facher/test.html?id=${item.id}&teacher=${item.teacher}`);
             return `<div class='item test'>
             <b class="test""> ${item.title + ' ' + item.subject} </b>
             - <a href="../test.html?id=${item.id}&teacher=${item.teacher}">Los</a> 

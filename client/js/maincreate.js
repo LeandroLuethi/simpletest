@@ -17,12 +17,10 @@ async function displayItems(){
 function displayItem(item, category){
    if(category === "edit"){
        var link = "facher/complete"
-       console.log(`facher/test.html?id=${item.id}&teacher=${userData.user}`);
        return `<div class='item test'>
        <button onclick='distribute("${userData.user}", "${item.id}")' class="distribute"></button>
         <button onclick='solution("${userData.user}", "${item.id}")' class="solution"></button>
         <b> ${item.title + ' - ' + item.subject} </b>
-         <!--a href="facher/test.html?id=${item.id}&teacher=${userData.user}">Los</a-->
         </div>`
    }  
 }
@@ -37,8 +35,6 @@ async function distribute(teacher, id) {
 
 async function solution(teacher, id){
     const result = await postDataWithToken("solution", {teacher, id})
-    console.log(result);
-
 }
 
 function grade() {

@@ -27,7 +27,6 @@ async function servestatic(req, res) {
 	const urlpath = new URL(req.url, "http://localhost").pathname
 	let filepath = path.join("..", "client", urlpath);
 	
-	console.log(filepath);
 	if(!fs.existsSync(filepath)) {
 		return send404(res)
 	}

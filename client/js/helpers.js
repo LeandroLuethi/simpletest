@@ -1,5 +1,4 @@
-const BASEURL = "http://localhost:8080/"
-
+const BASEURL = ["127", "localhost"].some(p=>location.href.includes(p)) ? "http://localhost:8080/" : "https://simpletest.3e8.ch/"
 
 function checkAuth() {
 	var hasUserData = localStorage.simpletest_userdata
@@ -22,14 +21,10 @@ async function postDataWithToken(url, data) {
 	const dataWithToken = {...data, user: userData.user, token: userData.token}
 	r = await postData(url, dataWithToken)
 	if(!r.ok && r.info == "token mismatch") {
-		console.log("token mismatch");
 		location.assign("login.html")
-		console.log(456);
 		return false
 	}
-	console.log(123, r);
 	return r
-	//return postData(url, data)
 }
 
 async function postData(url, data) {
@@ -59,7 +54,6 @@ function collectFormData(formElement) {
 }
 
 function checkFormResponse(response) {
-	console.log(response);
 	if(response.ok) {
 		Object.assign(window.datastore, response.data)
 		localStorage.dailyflowdata = JSON.stringify(window.datastore)
