@@ -124,6 +124,11 @@ div, form {
     background: orange;
 }
 
+.answer{
+    font-size: 120%;
+    padding: 0.5em;
+}
+
 @media screen and (min-width:400px) and (max-width:780px){
 
     .answerinput{
@@ -136,11 +141,7 @@ div, form {
         padding: 10px;
     }
 
-    .answer{
-        margin-left: 20%;
-        font-size: 120%;
-        display: inline;
-    }
+
 
     #question{
         font-size: 1.5rem;
@@ -190,12 +191,6 @@ div, form {
         -o-transform: scale(1.5); 
         transform: scale(1.5);
         padding: 10px;
-    }
-
-    .answer{
-        margin-left: 20%;
-        font-size: 120%;
-        display: inline;
     }
 
     #question{
@@ -251,9 +246,7 @@ div, form {
     }
 
     .answer{
-        margin-left: 10%;
         font-size: 2.5rem;
-        display: inline;
     }
 
     #points{
@@ -277,9 +270,7 @@ div, form {
     }
 
     .answer{
-        margin-left: 15%;
         font-size: 3rem;
-        display: inline;
     }
 
     #points{
